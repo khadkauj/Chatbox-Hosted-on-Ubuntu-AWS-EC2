@@ -1,0 +1,16 @@
+// styles import
+@import './_responsive_mixins';
+@import './_mixins';
+@import './_colors';
+
+// general styles
+@import './_common';
+
+// components
+@import './_navbar';
+@import './_message_bubble';
+
+// pages
+@import './_welcome';
+@import './_profile';
+@import './_chat';

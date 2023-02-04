@@ -1,0 +1,186 @@
+.nav {
+  @include flex();
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: $white;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+  @include dark-theme {
+    background-color: $dark-navbar;
+  }
+
+  @include responsive-small {
+    padding: 10px;
+  }
+
+  &-options {
+    @include flex(space-between, center);
+    gap: 20px;
+
+    @include responsive-medium {
+      gap: 15px;
+    }
+
+    @include responsive-small {
+      gap: 10px;
+    }
+  }
+}
+
+.theme-toggler {
+  @include flex;
+  gap: 5px;
+  cursor: pointer;
+
+  &:hover .theme-toggler__icon {
+    color: $dark !important;
+
+    @include dark-theme {
+      color: $white !important;
+    }
+  }
+
+  &__btn {
+    @include flex(flex-start, center);
+    width: 38.5px;
+    height: 22px;
+    background-color: $dark;
+    border-radius: 40px;
+    padding: 0 2.5px;
+
+    @include dark-theme {
+      justify-content: flex-end;
+      background-color: $white;
+    }
+
+    @include responsive-small {
+      width: 36px;
+    }
+  }
+
+  &__dot {
+    display: inline-block;
+    background-color: $white;
+    width: 18px;
+    height: 18px;
+    border-radius: inherit;
+
+    @include dark-theme {
+      background-color: $dark;
+    }
+
+    @include responsive-small {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__icon {
+    user-select: none;
+    width: 17.5px;
+    height: 17.5px;
+
+    @include responsive-small {
+      display: none;
+    }
+
+    &#light {
+      color: $dark;
+    }
+
+    &#dark {
+      color: $gray-light;
+    }
+
+    @include dark-theme {
+      &#light {
+        color: $gray-dark;
+      }
+      &#dark {
+        color: $white;
+      }
+    }
+  }
+}
+
+.sign-btn {
+  background-color: $white !important;
+  border-radius: 5px;
+  padding: 8.5px 10px;
+  border: none;
+  min-width: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+
+  .btn__text {
+    color: $dark;
+    letter-spacing: -0.5px;
+
+    @include responsive-small {
+      display: none;
+    }
+  }
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 0px 1px;
+}
+
+.nav-logo {
+  @include flex;
+  gap: 7px;
+  user-select: none;
+  cursor: context-menu;
+
+  @include responsive-medium {
+    gap: 5px;
+  }
+
+  &__icon {
+    user-select: none;
+    animation: logo-spin infinite 15s linear;
+    width: 65px;
+
+    @include responsive-large {
+      width: 57px;
+    }
+
+    @include responsive-medium {
+      width: 42px;
+    }
+  }
+
+  &__text {
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    color: $primary-color;
+
+    @include responsive-medium {
+      font-size: 23px;
+    }
+
+    @include responsive-small {
+      font-size: 18px;
+    }
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

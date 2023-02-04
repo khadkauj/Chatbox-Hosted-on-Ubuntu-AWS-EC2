@@ -1,0 +1,151 @@
+.chat {
+  padding: 0 16px;
+
+  .message-form {
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+    padding: 10px 20px;
+    display: inline-block;
+    gap: 10px;
+    width:100%;
+
+    @include responsive-medium {
+      bottom: 0px;
+    }
+
+    @include responsive-small {
+      padding: 10px;
+    }
+
+    .input-container {
+      flex: 1;
+      position: relative;
+    }
+
+    &__input-btn {
+      @include flex(center, center);
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 25px;
+      border: none;
+      padding: 5px;
+      background-color: transparent;
+      border-radius: 40px;
+      padding: 10px;
+      border: 2px solid transparent;
+      color: $dark;
+
+      &:hover {
+        transform: translateY(-50%) rotate(90deg);
+      }
+
+      @include dark-theme {
+        color: $light;
+      }
+
+      &.submit {
+        background-color: $primary-color;
+
+        &:hover {
+          transform: translateY(-50%) rotate(40deg);
+        }
+      }
+    }
+
+    &__input {
+      display: block;
+      width: 100%;
+      height: 65px;
+      padding: 11px 15px;
+      border: none;
+      outline: none;
+      background-color: $gray-light;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: 600;
+      color: $dark;
+      resize: none;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+      &::placeholder {
+        color: $dark;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $gray-light;
+        border-radius: 100px;
+      }
+
+      @include dark-theme {
+        background-color: $dark-navbar;
+        font-weight: 400;
+        color: $light;
+
+        &::placeholder {
+          color: $light;
+        }
+      }
+    }
+
+    &__btn {
+      background-color: $primary-color !important;
+      color: $dark !important;
+      min-width: 45px;
+      height: 46px;
+      font-size: 22px;
+      transition: $global-transition, border-radius 150ms linear;
+
+      @include dark-theme {
+        color: $light !important;
+      }
+
+      &:hover {
+        border-radius: 13px;
+      }
+    }
+
+    &.show-input {
+      width: 100%;
+    }
+  }
+
+  .scroll-top {
+    position: fixed;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 24px;
+    margin: auto;
+    min-width: auto;
+    animation: bounce 1.6s linear infinite forwards normal;
+
+    &:hover {
+      animation-play-state: paused;
+      color: $primary-color;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

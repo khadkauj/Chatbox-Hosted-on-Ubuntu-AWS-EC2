@@ -1,0 +1,170 @@
+// general styles
+
+$global-transition: 150ms color linear, 200ms background-color ease-in-out,
+  150ms width linear, 200ms border-color linear, transform 200ms linear,
+  margin 220ms linear, 150ms opacity linear, 150ms box-shadow linear;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: $global-transition;
+
+  &::selection {
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+html {
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  color: $dark;
+}
+
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Nunito', sans-serif;
+  padding-bottom: 80px;
+
+  @include responsive-small {
+    font-size: 16px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-light;
+    border-radius: 20px;
+  }
+
+  &.dark-theme {
+    background-color: $dark-body;
+
+    .background-icon {
+      color: $gray-dark;
+      opacity: 0.4;
+    }
+
+    .btn {
+      color: $light;
+    }
+  }
+
+  .background-icon {
+    display: none;
+    // position: fixed;
+    // color: $gray-light;
+    // opacity: 0.75;
+    // z-index: -1;
+    // user-select: none;
+
+    // &#firebase-icon {
+    //   width: 200px;
+    //   height: 200px;
+    //   top: 75px;
+    //   right: -80px;
+
+    //   @include responsive-medium {
+    //     width: 160px;
+    //     height: 160px;
+    //   }
+    // }
+
+    // &#react-icon {
+    //   width: 220px;
+    //   height: 220px;
+    //   bottom: 10px;
+    //   left: -90px;
+
+    //   @include responsive-medium {
+    //     width: 180px;
+    //     height: 180px;
+    //     left: -80px;
+    //   }
+    // }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  @include flex(center, center);
+  gap: 5px;
+  border: 2.3px solid transparent;
+  background-color: $primary-color;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  padding: 7px;
+  width: 100%;
+  min-width: 135px;
+  max-width: fit-content;
+  height: 43.5px;
+  border-radius: 2.5px;
+  color: $dark;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+  &:hover {
+    transform: translateY(-3px);
+    background-color: transparent;
+    border-color: $primary-color;
+    color: $dark;
+  }
+
+  &-round {
+    border-radius: 1000px;
+  }
+
+  &-transparent,
+  &-link {
+    background-color: transparent !important;
+  }
+
+  &-transparent {
+    border-color: $primary-color;
+    color: $dark;
+  }
+
+  &-link {
+    color: $primary-color;
+    text-decoration: underline;
+    box-shadow: none;
+    border: none;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
