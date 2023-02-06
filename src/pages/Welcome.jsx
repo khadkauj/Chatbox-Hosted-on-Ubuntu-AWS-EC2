@@ -14,17 +14,17 @@ export default function Welcome({ user, signInHandle }) {
     }
   }, [user]);
 
+
+
   return (
     <>
+    {/*   */}
       <main className='welcome'>
         <div className='section-container'>
-          <h1 className='section-title'>Chat with fellow developers</h1>
+          <h1 className='section-title'>Hello and welcome to our chatbox!</h1>
           <p className='section-description'>
-            By developer for developers. A real-time chat application build with{' '}
-            <a href='https://reactjs.org/'>ReactJS</a>
-            {' and '}
-            <a href='https://firebase.google.com/'>Firebase</a>. Simple way to
-            find new developers with similar interest.
+            We're excited to have you join our community.{' '}
+            Whether you're looking to connect with friends or meet new people, our chatbox is the perfect place to start. 
           </p>
 
           <div className='btn-container'>
