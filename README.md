@@ -15,7 +15,7 @@ Pleas make sure it's http and not https.The domain under cloudfront https would 
 ```bash
 git clone https://github.com/khadkauj/Chatbox-Hosted-on-Ubuntu-AWS-EC2.git
 
-cd Chatbox-Hosted-on-Ubuntu-AWS-EC2.git
+cd Chatbox-Hosted-on-Ubuntu-AWS-EC2
 
 npm install 
 
