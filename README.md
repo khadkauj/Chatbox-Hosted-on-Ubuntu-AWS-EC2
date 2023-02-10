@@ -7,3 +7,25 @@ Server address: http://52.210.194.140 </br>
 Live Demo: http://52.210.194.140:3000
 
 Pleas make sure it's http and https.The domain under cloudfront https would soon be added.
+
+## Installation
+
+### NPM
+First, run the development server:
+
+```bash
+npm install --force
+
+npm run start
+# or
+yarn start
+```
+
+### Docker Container
+
+1. Install [Docker](https://www.docker.com)
+2. Pull the Docker image by running `docker pull ujjwalinnfinxx/chatbox:latest`
+3. Run `docker run -p 3000:3000 ujjwalinnfinxx/chatbox:latest`
+
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
