@@ -1,7 +1,16 @@
+# remove everything that are dangling
+docker system prune
+docker system prune -a
+
 # stop and remove unwanted conflicting containers
 docker ps -a 
 docker stop ID_or_Name
 docker rm ID_or_Name
+
+# stop and remove unwanted conflicting images
+docker images -a
+docker rmi image_id
+
 
 # build and deploy
 sudo docker build -t chatbox  .
