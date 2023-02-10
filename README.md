@@ -27,9 +27,9 @@ yarn dev
 ### Docker Container
 
 1. Install [Docker](https://www.docker.com)
-2. Pull the Docker image by running 
+2. Pull the Docker image by running </br>
   `docker pull ujjwalinnfinxx/chatbox:latest`
-3. Run 
+3. Run </br>
   `docker run -p 3000:3000 ujjwalinnfinxx/chatbox:latest`
 
 
