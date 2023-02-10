@@ -1,0 +1,10 @@
+# stop and remove unwanted conflicting containers
+docker ps -a 
+docker stop ID_or_Name
+docker rm ID_or_Name
+
+# build and deploy
+sudo docker build -t chatbox  .
+sudo docker run --name chatbox -d -p 3000:3000 chatbox
+sudo docker tag chatbox chatbox/chatbox
+sudo docker push ujjwalinnfinxx/chatbox 
