@@ -3,8 +3,8 @@ This is a ReactJS chatbox application hosted on AWS EC2 Ubuntu instance on port 
 
 Stacks used: <b> React(frontend), Firebase(Database), AWS(Ubuntu EC2, Elastic IP, cloudfront, Route 53) </b>
 
-Server address: http://52.210.194.140 </br>
-Live Demo: http://52.210.194.140:3000
+Server address: https://chat.ujjwal-khadka.com.np/welcome </br>
+Live Demo: https://chat.ujjwal-khadka.com.np/welcome
 
 Pleas make sure it's http and not https.The domain under cloudfront https would soon be added.
 
