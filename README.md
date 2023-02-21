@@ -6,7 +6,6 @@ Stacks used: <b> React(frontend), Firebase(Database), AWS(Ubuntu EC2, Elastic IP
 Server address: http://52.210.194.140/ </br>
 Live Demo: https://chat.ujjwal-khadka.com.np
 
-Pleas make sure it's http and not https.The domain under cloudfront https would soon be added.
 
 ## Installation
 
